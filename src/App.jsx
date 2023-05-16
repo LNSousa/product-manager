@@ -1,13 +1,15 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Index from './components/Index'
+import Form from './components/Form'
+import Display from './components/Display';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={<Index/>} />
+        <Route path='/products/:id' element={<Display/>} />
+        <Route path='/' element={<Form/>} />
       </Routes>
     </div>
   );
